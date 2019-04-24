@@ -20,10 +20,10 @@ apt-get install -y --quiet man-db
 /opt/conda/bin/conda update -y conda
 /opt/conda/bin/conda update -y --all
 /opt/conda/bin/conda install -c anaconda git
-git clone https://github.com/vaofford/team113-conda.git
-/opt/conda/bin/conda create -p /opt/conda/envs/nextflow -y --file team113-conda/environments/Conda.nextflow__19.01.0__ha4d7672_4
+git clone https://github.com/team113sanger/t113-conda.git
+/opt/conda/bin/conda create -p /opt/conda/envs/nextflow -y --file t113-conda/environments/Conda.nextflow__19.01.0__ha4d7672_4
 /opt/conda/bin/conda clean --all -y
-rm -rf team113-conda
+rm -rf t113-conda
 echo ". /opt/conda/etc/profile.d/conda.sh" >>$SINGULARITY_ENVIRONMENT
 echo "conda activate nextflow" >>$SINGULARITY_ENVIRONMENT
 
