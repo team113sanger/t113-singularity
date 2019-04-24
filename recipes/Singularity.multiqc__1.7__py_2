@@ -20,7 +20,7 @@ apt-get install -y --quiet man-db
 /opt/conda/bin/conda update -y conda
 /opt/conda/bin/conda update -y --all
 /opt/conda/bin/conda install -c anaconda git
-git clone https://github.com/team113sanger/team113-conda.git
+git clone https://github.com/team113sanger/t113-conda.git
 /opt/conda/bin/conda create -p /opt/conda/envs/multiqc -y --file team113-conda/environments/Conda.multiqc__1.7__py_2
 /opt/conda/bin/conda clean --all -y
 rm -rf team113-conda
