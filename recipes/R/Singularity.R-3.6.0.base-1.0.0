@@ -59,6 +59,7 @@ Help message
                         readline-devel \
                         tar \
                         tcl-devel \
+			texinfo \
                         tk-devel \
                         unzip \
                         vim-minimal \
@@ -75,6 +76,7 @@ Help message
 	tar -xzf install-tl-unx.tar.gz
 	cd install-tl-20*
 	./install-tl --profile=/tmp/texlive.profile
+	tlmgr install titling framed inconsolata
 	tlmgr install collection-fontsrecommended
 	tlmgr option -- autobackup 0
 
