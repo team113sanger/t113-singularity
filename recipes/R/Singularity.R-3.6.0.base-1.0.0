@@ -51,17 +51,12 @@ Help message
                         libXt-devel \
                         libX11-devel \
                         make \
+                        perl-Digest-MD5 \
                         perl-Tk \
                         pcre-devel \
                         readline-devel \
                         tar \
                         tcl-devel \
-                        texinfo \
-                        texlive texlive-latex texlive-xetex \
-                        texlive-helvetic \
-                        texlive-metafont \
-                        texlive-psnfss \
-                        texlive-times \
                         tk-devel \
                         unzip \
                         vim-minimal \
@@ -73,9 +68,7 @@ Help message
                         zlib zlib-devel 
 
         # Download and link missing fonts
-        mkdir /usr/local/share/fonts
-        wget http://mirrors.ctan.org/fonts/inconsolata/tex/inconsolata.sty -O /usr/local/share/fonts/inconsolata.sty
-        export TEXINPUTS=".:/usr/local/share/fonts:"
+        wget -qO- "https://yihui.name/gh/tinytex/tools/install-unx.sh" | sh
 
         # Download R
         cd /tmp
@@ -99,7 +92,7 @@ Help message
         make check
         
         # Clean up
-        #yum clean all && rm -rf /var/cache/yum
-        #rm -rf /tmp/${R_VERSION}
+        yum clean all && rm -rf /var/cache/yum
+        rm -rf /tmp/${R_VERSION}
         
 
