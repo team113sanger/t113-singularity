@@ -13,7 +13,9 @@ Help message
 %environment
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
-        export TEXINPUTS=".:/usr/local/share/fonts:" 
+
+%files
+        texlive.profile
 
 %apprun R
         exec R "$@"
@@ -66,12 +68,17 @@ Help message
                         xorg-x11-server-devel \
                         xz-devel \
                         zlib zlib-devel 
-        echo "Installing texlive"
-        # Download and link missing fonts
-        wget -qO- "https://yihui.name/gh/tinytex/tools/install-unx.sh" | sh
-        echo "Installing R"
-        # Download R
+        
+        # Install basic texlive from profile
         cd /tmp
+        wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+	tar -xzf install-tl-unx.tar.gz
+	cd install-tl-20*
+	./install-tl --profile=texlive.profile
+	tlmgr install collection-fontsrecommended
+	tlmgr option -- autobackup 0
+
+        # Download R
         curl -O https://cran.r-project.org/src/base/R-3/R-${R_VERSION}.tar.gz
         tar -xf R-${R_VERSION}.tar.gz
         cd R-${R_VERSION}
@@ -94,5 +101,5 @@ Help message
         # Clean up
         yum clean all && rm -rf /var/cache/yum
         rm -rf /tmp/${R_VERSION}
-        
+        rm -rf /tmp/install-tl*
 
