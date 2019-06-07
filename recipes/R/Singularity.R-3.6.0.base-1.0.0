@@ -69,6 +69,7 @@ Help message
                         which \
                         xdg-utils \
                         xorg-x11-server-devel \
+                        xz-devel \
                         zlib zlib-devel 
 
         # Download and link missing fonts
