@@ -96,10 +96,10 @@ Help message
         make -j4
         make install
         make install-libR
-        make check
+        #make check
         
         # Clean up
-        yum clean all && rm -rf /var/cache/yum
-        rm -rf /tmp/${R_VERSION}
+        #yum clean all && rm -rf /var/cache/yum
+        #rm -rf /tmp/${R_VERSION}
         
 
