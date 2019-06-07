@@ -35,6 +35,7 @@ Help message
         # Get dependencies
         yum update -y
         yum install -y \
+                        autoconf \
                         bzip bzip2-devel \
                         cairo-devel \
                         firefox \
