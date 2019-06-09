@@ -50,9 +50,11 @@ Help message
                         libjpeg-turbo libjpeg-devel \
                         libpng libpng-devel \
                         libtiff libtiff-devel \
+			libxml2-devel \
                         libXt-devel \
                         libX11-devel \
                         make \
+			openssl-devel \
                         perl-Digest-MD5 \
                         perl-Tk \
                         pcre-devel \
