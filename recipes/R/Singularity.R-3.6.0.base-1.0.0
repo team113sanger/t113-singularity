@@ -101,6 +101,12 @@ Help message
         make install
         make install-libR
         make check
+	
+	# Install R packages from CRAN
+	Rscript -e "install.packages(pkgs = c('devtools', 'tidyverse', 'argparse', 'pheatmap'), \
+		repos='https://www.stats.bris.ac.uk/R/', \
+    		dependencies=TRUE, \
+    		clean = TRUE)"
         
         # Clean up
         yum clean all && rm -rf /var/cache/yum
