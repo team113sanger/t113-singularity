@@ -96,6 +96,7 @@ Help message
                                 --disable-nls \
                                 --with-cairo \
                                 --with-recommended-packages
+				
         # Build and install
         make -j4
         make install
@@ -103,11 +104,8 @@ Help message
         make check
 	
 	# Install R packages from CRAN
-	Rscript -e "install.packages(pkgs = c('devtools', 'tidyverse', 'argparse', 'pheatmap'), \
-		repos='https://www.stats.bris.ac.uk/R/', \
-    		dependencies=TRUE, \
-    		clean = TRUE)"
-        
+	Rscript -e "install.packages(pkgs = c('devtools', 'tidyverse', 'argparse', 'pheatmap'), repos='https://www.stats.bris.ac.uk/R/', dependencies=TRUE, clean = TRUE)"
+	
         # Clean up
         yum clean all && rm -rf /var/cache/yum
         rm -rf /tmp/${R_VERSION}
