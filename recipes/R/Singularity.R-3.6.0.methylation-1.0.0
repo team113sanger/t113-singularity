@@ -26,11 +26,9 @@ Help message
 %post
 
 	# Install R packages from bioconductor
-	if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-  BiocManager::install('methylKit')
+	Rscript -e "install.packages('BiocManager'); BiocManager::install('methylKit')"
   
-  # Clean up
-  yum clean all && rm -rf /var/cache/yum
-  rm -rf /tmp/${R_VERSION}
-  rm -rf /tmp/install-tl*
+	# Clean up
+	yum clean all && rm -rf /var/cache/yum
+	rm -rf /tmp/${R_VERSION}
+	rm -rf /tmp/install-tl*
