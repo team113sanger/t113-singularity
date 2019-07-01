@@ -29,7 +29,7 @@ Help message
 
         git clone https://github.com/sanger-pathogens/Bio-Deago.git
         cd Bio-Deago
-        cpanm aliased
+        cpanm aliased File::pushd
         dzil authordeps --missing | cpanm --notest -f
         cpanm CPAN::Meta::Requirements
         dzil listdeps --missing | cpanm
