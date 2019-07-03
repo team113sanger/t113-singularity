@@ -28,10 +28,10 @@ From: python:3.7.3-alpine3.10
 
         # Get dependencies
         apk add git wget
-        wget -P /usr/local/bin https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL.py
-        wget -P /usr/local/bin https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL-calc_foldchange.py
-        wget -P /usr/local https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_essentials.txt
-        wget -P /usr/local https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_nonessential.txt
+        wget -O /usr/local/bin/BAGEL-calc_foldchange.py https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL-calc_foldchange.py?format=raw
+        wget -O /usr/local/bin/BAGEL.py https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL.py?format=raw
+        wget -O /usr/local/training_essentials.txt https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_essentials.txt
+        wget -O /usr/local/training_nonessential.txt https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_nonessential.txt
 
         # Update permissions
         chmod +x /usr/local/bin/BAGEL*
