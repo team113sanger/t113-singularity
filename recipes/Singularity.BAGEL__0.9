@@ -19,13 +19,9 @@ From: python:3.7.3-alpine3.10
         exec BAGEL.py "$@"
 
 %post
-        # Software versions
-         export R_VERSION=3.6.0
-
-        # Language
-        export LC_ALL=en_US.UTF-8
-        export LANG=en_US.UTF-8
-
+        # Link python
+        ln -s /usr/local/bin/python /usr/bin/python
+        
         # Get dependencies
         apk add git wget
         wget -O /usr/local/bin/BAGEL-calc_foldchange.py https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL-calc_foldchange.py?format=raw
