@@ -1,0 +1,34 @@
+BootStrap: docker
+From: python/3.7.3-alpine3.10
+
+%labels
+        Maintainer Team113 Wellcome Sanger Institute
+        Version v1.0.0
+
+%environment
+        export LC_ALL=en_US.UTF-8
+        export LANG=en_US.UTF-8
+
+%apprun BAGEL-calc_foldchange.py
+        exec  BAGEL-calc_foldchange.py "$@"
+
+%apprun BAGEL.py
+        exec BAGEL.py "$@"
+
+%runscript
+        exec BAGEL.py "$@"
+
+%post
+        # Software versions
+         export R_VERSION=3.6.0
+
+        # Language
+        export LC_ALL=en_US.UTF-8
+        export LANG=en_US.UTF-8
+
+        # Get dependencies
+        apk add git wget
+        wget -P /usr/local/bin https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL.py
+        wget -P /usr/local/bin https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL-calc_foldchange.py
+        wget -P /usr/local https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_essentials.txt
+        wget -P /usr/local https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_nonessential.txt
