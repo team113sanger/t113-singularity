@@ -23,9 +23,7 @@ From: python:2.7.16-alpine3.10
         ln -s /usr/local/bin/python /usr/bin/python
         
         # Get python dependencies
-        pip install numpy
-        pip install pandas
-        pip install scipy-stack
+        pip install --no-cache-dir numpy scipy pandas
         
         # Get BAGEL scripts and reference files
         apk add wget
