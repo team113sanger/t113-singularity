@@ -23,7 +23,7 @@ From: python:2.7.16-alpine3.10
         ln -s /usr/local/bin/python /usr/bin/python
         
         # Get python dependencies
-        pip install --no-cache-dir numpy scipy pandas
+        pip install --no-cache-dir numpy==1.15.4 scipy pandas
         
         # Get BAGEL scripts and reference files
         apk add wget
