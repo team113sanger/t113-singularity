@@ -22,8 +22,13 @@ From: python:2.7.16-alpine3.10
         # Link python
         ln -s /usr/local/bin/python /usr/bin/python
         
-        # Get dependencies
-        apk add git wget
+        # Get python dependencies
+        pip install numpy
+        pip install pandas
+        pip install scipy-stack
+        
+        # Get BAGEL scripts and reference files
+        apk add wget
         wget -O /usr/local/bin/BAGEL-calc_foldchange.py https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL-calc_foldchange.py?format=raw
         wget -O /usr/local/bin/BAGEL.py https://sourceforge.net/p/bagel-for-knockout-screens/code/ci/master/tree/BAGEL.py?format=raw
         wget -O /usr/local/training_essentials.txt https://sourceforge.net/projects/bagel-for-knockout-screens/files/training_essentials.txt
