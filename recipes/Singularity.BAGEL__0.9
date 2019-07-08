@@ -9,12 +9,6 @@ From: python:2.7.16-alpine3.10
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
 
-%apprun BAGEL-calc_foldchange.py
-        exec  BAGEL-calc_foldchange.py "$@"
-
-%apprun BAGEL.py
-        exec BAGEL.py "$@"
-
 %runscript
         exec BAGEL.py "$@"
 
