@@ -23,7 +23,8 @@ From: python:2.7.16-alpine3.10
         ln -s /usr/local/bin/python /usr/bin/python
         
         # Get python dependencies
-        pip install --no-cache-dir numpy==1.15.4 scipy pandas
+        apk add py2-numpy py2-scipy
+        apk add py2-pandas --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
         
         # Get BAGEL scripts and reference files
         apk add wget
