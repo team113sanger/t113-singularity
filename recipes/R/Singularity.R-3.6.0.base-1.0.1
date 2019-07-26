@@ -108,7 +108,7 @@ Help message
 	Rscript -e "install.packages(pkgs = c('hrbrthemes'), repos = 'https://cinc.rud.is', dependencies=TRUE, clean = TRUE)"
 	
 	# Install Bioconductor core packages
-	Rscript -e "install.packages('BiocManager')"
+	Rscript -e "install.packages('BiocManager', repos='https://www.stats.bris.ac.uk/R/')"
 	Rscript -e "BiocManager::install()"
 	
         # Clean up
