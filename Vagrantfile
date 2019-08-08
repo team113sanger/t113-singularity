@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
 		unzip master.zip
 		rm master.zip
 		mv t113-singularity-master t113-singularity
-		
+		chown -R vagrant:vagrant t113-singularity
+		chmod -R g+w t113-singularity
 	SHELL
 end
