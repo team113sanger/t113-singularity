@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
 		#ssh -T git@github.com
 		#git clone git@github.com:team113sanger/t113-singularity.git
 
+		## Comment out the lines below if you want to use your host SSH key for GitHub
 		wget https://github.com/team113sanger/t113-singularity/archive/master.zip
 		unzip master.zip
 		rm master.zip
