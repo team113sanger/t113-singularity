@@ -13,13 +13,18 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provision "shell", inline: <<-SHELL
 		sudo apt-get update
-		sudo apt-get install -y git
-		mkdir -p ~/.ssh
-		chmod 700 ~/.ssh
-		ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-		ssh -T git@github.com
-		git clone git@github.com:team113sanger/t113-singularity.git
-	SHELL
+		sudo apt-get install -y git unzip wget
+			
+		## Uncomment the following lines if you want to use your host SSH key for GitHub
+		#mkdir -p ~/.ssh
+		#chmod 700 ~/.ssh
+		#ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+		#ssh -T git@github.com
+		#git clone git@github.com:team113sanger/t113-singularity.git
 
-#	config.vm.provision :reload
+		wget https://github.com/team113sanger/t113-singularity/archive/master.zip
+		unzip master.zip
+		rm master.zip
+		
+	SHELL
 end
