@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
 		wget https://github.com/team113sanger/t113-singularity/archive/master.zip
 		unzip master.zip
 		rm master.zip
+		mv t113-singularity-master t113-singularity
 		
 	SHELL
 end
