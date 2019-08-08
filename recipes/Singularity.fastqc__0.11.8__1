@@ -1,4 +1,3 @@
-0.11.8__1
 BootStrap: docker
 From: continuumio/miniconda
 
