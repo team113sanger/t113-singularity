@@ -83,4 +83,11 @@
     "source": "SingularityHub",
     "uri": "shub://t113-singularity_mageck__0.5.8__py36h3e44d54_0"
   }
+  {
+    "name": "R 3.6.0 subclonal reconstruction",
+    "version": "1.0.0",
+    "build": "",
+    "source": "SingularityHub",
+    "uri": "shub://t113-singularity_r-3.6.0.subclonal_reconstruction-1.0.0"
+  }
 ]
