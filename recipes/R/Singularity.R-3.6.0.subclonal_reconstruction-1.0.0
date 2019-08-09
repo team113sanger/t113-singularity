@@ -3,7 +3,7 @@ From: team113sanger/t113-singularity:r-3.6.0.base-1.0.1
 IncludeCmd: no
 
 %help
-Team 113 Singularity image for subclonal reconstruction (R-3.6.0)
+	Team 113 Singularity image for subclonal reconstruction 
 
 %labels
         Maintainer Team113 Wellcome Sanger Institute
