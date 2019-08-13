@@ -90,4 +90,11 @@
     "source": "SingularityHub",
     "uri": "shub://t113-singularity_r-3.6.0.subclonal_reconstruction-1.0.0"
   }
+  {
+    "name": "fastp",
+    "version": "0.18",
+    "build": "hd28b015_0",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/fastp:0.18.0--hd28b015_0"
+  }
 ]
