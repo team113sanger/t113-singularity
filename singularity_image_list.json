@@ -14,13 +14,6 @@
     "uri": "shub://team113sanger/t113-singularity:bagel__0.9"
   },
   {
-    "name": "MULTIQC",
-    "version": "1.7",
-    "build": "py_2",
-    "source": "SingularityHub",
-    "uri": "shub://team113sanger/t113-singularity:multiqc__1.7__py_2"
-  },
-  {
     "name": "fqtools",
     "version": "2.2",
     "build": "",
@@ -28,33 +21,26 @@
     "uri": "shub://t113-singularity_fqtools__2.2"
   },
   {
-    "name": "nextflow",
-    "version": "19.01.0",
-    "build": "",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_fqtools__2.2"
-  },
-  {
-    "name": "R 3.6.0 base",
-    "version": "1.0.0",
-    "build": "",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_r-3.6.0.base-1.0.0"
-  },
-  {
     "name": "R 3.6.0 base",
     "version": "1.0.1",
     "build": "",
     "source": "SingularityHub",
     "uri": "shub://t113-singularity_r-3.6.0.base-1.0.1"
-  }, 
+  },   
   {
     "name": "R 3.6.0 methylation",
     "version": "1.0.0",
     "build": "",
     "source": "SingularityHub",
     "uri": "shub://t113-singularity_r-3.6.0.methylation-1.0.0"
-  }, 
+  },  
+  {
+    "name": "R 3.6.0 subclonal reconstruction",
+    "version": "1.0.0",
+    "build": "",
+    "source": "SingularityHub",
+    "uri": "shub://t113-singularity_r-3.6.0.subclonal_reconstruction-1.0.0"
+  },
   {
     "name": "STAR-fusion",
     "version": "1.6.0",
@@ -63,38 +49,66 @@
     "uri": "shub://t113-singularity_star-fusion__1.6.0"
   }, 
   {
-    "name": "seqtk",
-    "version": "1.3",
-    "build": "",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_seqtk__1.3"
-  }, 
+    "name": "bedtools",
+    "version": "2.27.1",
+    "build": "1",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/bedtools:2.27.1--1"
+  },  
   {
-    "name": "kallisto",
-    "version": "0.46.0",
-    "build": "hb6a4e58_0",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_kallisto__0.46.0__hb6a4e58_0"
-  }, 
-  {
-    "name": "MAGeCK",
-    "version": "0.5.8",
-    "build": "py36h3e44d54_0",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_mageck__0.5.8__py36h3e44d54_0"
-  }
-  {
-    "name": "R 3.6.0 subclonal reconstruction",
-    "version": "1.0.0",
-    "build": "",
-    "source": "SingularityHub",
-    "uri": "shub://t113-singularity_r-3.6.0.subclonal_reconstruction-1.0.0"
-  }
+    "name": "datamash",
+    "version": "1.1.0",
+    "build": "0",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/datamash:1.1.0--0"
+  },    
   {
     "name": "fastp",
     "version": "0.18",
     "build": "hd28b015_0",
     "source": "BioContainers",
     "uri": "docker://quay.io/biocontainers/fastp:0.18.0--hd28b015_0"
+  },  
+  {
+    "name": "jq",
+    "version": "1.5",
+    "build": "0",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/jq:1.5--0"
+  },    
+  {
+    "name": "kallisto",
+    "version": "0.42.4",
+    "build": "2",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/kallisto:0.42.4--2"
+  },     
+  {
+    "name": "mageck",
+    "version": "0.5.7",
+    "build": "py27_4",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/mageck:0.5.7--py27_4"
+  },      
+  {
+    "name": "multiqc",
+    "version": "1.0",
+    "build": "py36_1",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/multiqc:1.0--py36_1"
+  },     
+  {
+    "name": "seqtk",
+    "version": "1.3",
+    "build": "ha92aebf_0",
+    "source": "BioContainers",
+    "uri": "docker://quay.io/biocontainers/seqtk:1.3--ha92aebf_0"
+  }, 
+  {
+    "name": "seqtk",
+    "version": "1.3",
+    "build": "ha92aebf_0",
+    "source": "Docker",
+    "uri": "docker://broadinstitute/gatk:4.1.2.0."
   }
 ]
