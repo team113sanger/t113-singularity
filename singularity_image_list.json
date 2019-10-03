@@ -117,5 +117,12 @@
     "build": "",
     "source": "DockerHub",
     "uri": "docker://sequenza/sequenza:3.0.0"
+  },
+  {
+    "name": "cgp-methpipe",
+    "version": "1.0",
+    "build": "",
+    "source": "CGP",
+    "uri": "docker://quay.io/wtsicgp/cgp-methpipe"
   }
 ]
